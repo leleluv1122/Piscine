@@ -1,0 +1,5 @@
+Credentials cache: API:29FCCDC7-3C3B-4F33-AE95-E01007B28362
+        Principal: seupark@42SEOUL.KR
+
+  Issued                Expires             Flags    Principal
+Oct 12 13:06:14 2020  Oct 12 23:06:14 2020  FPRIA  krbtgt/42SEOUL.KR@42SEOUL.KR
