@@ -1,1 +1,1 @@
-ifconfig | grep ether | grep -v media
+ifconfig | grep ether | grep -v media | tr -d "	ether "
