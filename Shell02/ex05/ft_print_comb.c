@@ -1,28 +1,47 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seupark <seupark@student.42seoul.k>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/17 21:17:24 by seupark           #+#    #+#             */
+/*   Updated: 2020/10/17 21:44:50 by seupark          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void ft_print_comb(void){
-	char a = '0';
-	while(1){
-		char b = '1';
-		while(1){
-			char c = '2';
-			while(1){
-				write(1, &a, 1);
-				write(1, &b, 1);
-				write(1, &c, 1);
-				if(c == '9')
-					break; 
-				int cc = (int)c + 1;
-				char rc = (char)cc;
-			}
-			if(b == '8')
+char arr[3];
+int visited[10];
+
+void	comb (int idx, int cnt)
+{
+	if(cnt == 2)
+	{
+		int i = 0;
+		while(1)
+		{
+			write(1, arr[i], 1);
+			if(i == 2)
 				break;
-			int bb = (int)b + 1;
-			b = (char)bb;
+			i++;
 		}
-		if(a == '7')
-			break;
-		int aa = (int)a + 1;
-		a = (char)aa;
+		return;
 	}
+
+	int a = 0;
+	while(1)
+	{
+		if(visited[a] == 0)
+		{
+			visited[a] = 1;
+			
+		}		
+	}
+}
+
+void	ft_print_comb (void)
+{
+	
 }
