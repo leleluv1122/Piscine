@@ -1,6 +1,14 @@
 #include <unistd.h>
 
 void ft_print_alphabet(void){
-	char* c = "abcdefghijklmnopqrstuvwxyz";
-	write(1, c, 26);
+	char c = 'a';
+	int i = 0;
+	while(1){
+		int d = (int)c + i;
+		char f = (char)d;
+		write(1, &f, 1);
+		i++;
+		if(i >= 26)
+			break;
+	}
 }
