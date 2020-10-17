@@ -1,1 +1,1 @@
-ls -aR | grep '.*[.]sh'
+find . -type f -exec basename {} \; | sed -e 's/\.sh$//'
