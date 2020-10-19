@@ -6,42 +6,57 @@
 /*   By: seupark <seupark@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 21:17:24 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/17 21:44:50 by seupark          ###   ########.fr       */
+/*   Updated: 2020/10/19 14:13:46 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 char arr[3];
-int visited[10];
 
-void	comb (int idx, int cnt)
+void	combi(int idx, int cnt)
 {
-	if(cnt == 2)
+	if (cnt == 3)
 	{
-		int i = 0;
-		while(1)
+		int b = 0;
+		while(b < 3)
 		{
-			write(1, arr[i], 1);
-			if(i == 2)
-				break;
-			i++;
+			write(1, &arr[b], 1);
+			b++;
+		}
+		if(arr[0] == '7' && arr[1] == '8' && arr[2] == '9')
+			;
+		else
+		{
+			char h = ',';
+			write(1, &h, 1);
+			h = ' ';
+			write(1, &h, 1);
 		}
 		return;
 	}
-
-	int a = 0;
+	
+	int d = idx + 1;
 	while(1)
 	{
-		if(visited[a] == 0)
-		{
-			visited[a] = 1;
-			
-		}		
+		char c = (char)d + '0';
+		arr[cnt] = c;
+		combi(d, cnt + 1);
+		if(cnt == 1 && d == 8)
+			break;
+		if(cnt == 2 && d == 9)
+			break;
+		d++;
 	}
 }
 
-void	ft_print_comb (void)
+void 	ft_print_comb(void)
 {
-	
+	int a = 0;
+	while(a <= 7)
+	{
+		char c = (int)a + '0';
+		arr[0] = c;
+		combi(a++, 1);
+	}
 }
