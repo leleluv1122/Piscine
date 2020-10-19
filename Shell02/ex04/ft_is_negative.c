@@ -6,19 +6,24 @@
 /*   By: seupark <seupark@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 20:49:10 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/17 20:49:14 by seupark          ###   ########.fr       */
+/*   Updated: 2020/10/19 21:55:22 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_is_negative(int n){
-	if(n < 0){
-		char c = 'N';
+void	ft_is_negative(int n)
+{
+	char	c;
+
+	if (n < 0)
+	{
+		c = 'N';
 		write(1, &c, 1);
 	}
-	else{
-		char c = 'P';
+	else
+	{
+		c = 'P';
 		write(1, &c, 1);
 	}
 }
