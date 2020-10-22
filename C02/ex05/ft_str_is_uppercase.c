@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seupark <seupark@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/22 17:21:22 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/22 17:43:19 by seupark          ###   ########.fr       */
+/*   Created: 2020/10/22 17:45:00 by seupark           #+#    #+#             */
+/*   Updated: 2020/10/22 17:48:23 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,25 +32,25 @@ int		empty_func(char *str)
 	return (ret);
 }
 
-int		ft_str_is_lowercase(char *str)
+int		ft_str_is_uppercase(char *str)
 {
 	int		empty;
-	int		is_low;
+	int		is_high;
 	char	*c;
 
 	c = str;
-	is_low = 1;
+	is_high = 1;
 	empty = empty_func(c);
 	if (empty == 1)
-		is_low = 1;
+		is_high = 1;
 	while (*c != '\0')
 	{
-		if (*c < 'a' || *c > 'z')
+		if (*c < 'A' || *c > 'Z')
 		{
-			is_low = 0;
+			is_high = 0;
 			break ;
 		}
 		c++;
 	}
-	return (is_low);
+	return (is_high);
 }
