@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: seupark <seupark@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 21:40:27 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/22 12:38:42 by seupark          ###   ########.fr       */
+/*   Created: 2020/10/22 12:43:23 by seupark           #+#    #+#             */
+/*   Updated: 2020/10/22 14:00:15 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	char	*c;
-	int	num;
+	char	*start = dest;
 
-	c = src;
-	num = 0;
-	while(1)
-	{
-		if (*c == '\0')
-			break ;
-		dest[num] = *c;
-		c++;
-		num++;
-	}
-	return (dest);
+	while (n--)
+		*src++ = *start++;
+	return (start);
 }

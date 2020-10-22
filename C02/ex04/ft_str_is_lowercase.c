@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: seupark <seupark@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 21:40:27 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/22 12:38:42 by seupark          ###   ########.fr       */
+/*   Created: 2020/10/22 17:21:22 by seupark           #+#    #+#             */
+/*   Updated: 2020/10/22 17:27:23 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strcpy(char *dest, char *src)
+int		ft_str_is_lowercase(char *str)
 {
-	char	*c;
-	int	num;
 
-	c = src;
-	num = 0;
-	while(1)
-	{
-		if (*c == '\0')
-			break ;
-		dest[num] = *c;
-		c++;
-		num++;
-	}
-	return (dest);
+
 }
