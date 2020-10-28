@@ -6,7 +6,7 @@
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 21:26:02 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/27 21:27:57 by seupark          ###   ########.fr       */
+/*   Updated: 2020/10/28 10:45:18 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 
 	i = 0;
 	j = 0;
-	while (s1[i] != '\0')
+	while (dest[i] != '\0')
 		i++;
-	while (s2[j] != '\0' && j < (int)n)
+	while (src[j] != '\0' && j < (int)nb)
 	{
-		s1[i] = s2[j];
+		dest[i] = src[j];
 		i++;
 		j++;
 	}
-	s1[i] = '\0';
-	return (s1);
+	dest[i] = '\0';
+	return (dest);
 }

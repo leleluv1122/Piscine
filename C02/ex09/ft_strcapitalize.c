@@ -3,54 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seupark <seupark@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/25 14:36:29 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/25 15:14:59 by seupark          ###   ########.fr       */
+/*   Created: 2020/10/27 22:10:06 by seupark           #+#    #+#             */
+/*   Updated: 2020/10/27 22:16:05 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
-
-int		check(char *c)
-{
-	int		rst;
-
-	rst = 0;
-	if (*c >= 'a' && *c <= 'z')
-		rst = 1;
-	if (*c >= 'A' && *c <= 'Z')
-		rst = 1;
-	if (*c >= '0' && *c <= '9')
-		rst = 1;
-	return (rst);
-}
 
 char	*ft_strcapitalize(char *str)
 {
-	char	*c;
-	int		idx;
+	int	i;
+	int	upper;
 
-	c = str;
-	idx = 0;
-	while (*c)
+	i = 0;
+	upper = 1;
+	while (str[i] != '\0')
 	{
-		if (idx == 0)
+		if ((str[i] >= '0' && str[i] <= '9') ||
+				(str[i] >= 'a' && str[i] <= 'z') ||
+				(str[i] >= 'A' && str[i] <= 'Z'))
 		{
-			if (*c >= 'a' && *c <= 'z')
-			{
-				*c -= 32;
-				idx++;
-			}
-			else if (*c >= '0' && *c <= '9')
-				idx++;
+			if (upper && (str[i] >= 'a' && str[i] <= 'z'))
+				str[i] = str[i] - 32;
+			else if (!upper && (str[i] >= 'A' && str[i] <= 'Z'))
+				str[i] = str[i] + 32;
+			upper = 0;
 		}
-		else if (!check(c))
-			idx = 0;
 		else
-			idx++;
-		c++;
+			upper = 1;
+		i++;
 	}
 	return (str);
 }

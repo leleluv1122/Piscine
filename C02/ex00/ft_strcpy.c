@@ -6,7 +6,7 @@
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 21:40:27 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/22 12:38:42 by seupark          ###   ########.fr       */
+/*   Updated: 2020/10/26 19:28:49 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,16 @@
 char	*ft_strcpy(char *dest, char *src)
 {
 	char	*c;
-	int	num;
+	int		num;
 
 	c = src;
 	num = 0;
-	while(1)
+	while (*c)
 	{
-		if (*c == '\0')
-			break ;
 		dest[num] = *c;
 		c++;
 		num++;
 	}
+	dest[num] = '\0';
 	return (dest);
 }

@@ -6,42 +6,43 @@
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 15:46:02 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/26 15:53:30 by seupark          ###   ########.fr       */
+/*   Updated: 2020/10/28 09:33:46 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	print_hex(int num)
+void	ft_putchar(char c)
 {
-	char	*hex;
+	write(1, &c, 1);
+}
 
-	hex = "0123456789abcdef";
-	if (num >= 16)
-	{
-		print_hex(num / 16);
-		print_hex(num % 16);
-	}
-	else
-		write(1, &hex[num], 1);
+int		is_char_printable(char c)
+{
+	if (c >= ' ' && c < 127)
+		return (1);
+	return (0);
 }
 
 void	ft_putstr_non_printable(char *str)
 {
-	int		i;
+	int				idx;
+	unsigned char	current;
 
-	i = 0;
-	while(str[i])
+	idx = 0;
+	while (1)
 	{
-		if ((str[i] <= 31 && str[i] >= 0) || str[i] == 127)
-		{
-			write(1, "\\", 1);
-			if (str[i] < 16)
-				write(1, "0", 1);
-			print_hex(str[i]);
-		}
+		current = str[idx];
+		if (current == '\0')
+			break ;
+		if (is_char_printable(current))
+			ft_putchar(current);
 		else
-			write(1, &str[i], 1);
-		i++;
+		{
+			ft_putchar('\\');
+			ft_putchar("0123456789abcdef"[current / 16]);
+			ft_putchar("0123456789abcdef"[current % 16]);
+		}
+		idx++;
 	}
 }

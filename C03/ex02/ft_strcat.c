@@ -6,9 +6,11 @@
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 20:25:46 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/27 20:55:16 by seupark          ###   ########.fr       */
+/*   Updated: 2020/10/28 10:22:46 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 char	*ft_strcat(char *dest, char *src)
 {
