@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/27 21:26:02 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/28 21:01:50 by seupark          ###   ########.fr       */
+/*   Created: 2020/10/28 19:59:02 by seupark           #+#    #+#             */
+/*   Updated: 2020/10/28 20:05:56 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+void	print_char(char c)
 {
-	char	*tmp;
+	write(1, &c, 1);
+}
 
-	tmp = dest;
-	if (nb)
+void	ft_putstr(char *str)
+{
+	int		idx;
+
+	idx = 0;
+	while (str[idx] != '\0')
 	{
-		while (*dest)
-			dest++;
-		while ((*dest++ = *src++) != 0)
-		{
-			if (--nb == 0)
-			{
-				*dest = '\0';
-				break ;
-			}
-		}
+		print_char(str[idx]);
+		idx++;
 	}
-	return (tmp);
 }

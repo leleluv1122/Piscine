@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/27 21:26:02 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/28 21:01:50 by seupark          ###   ########.fr       */
+/*   Created: 2020/10/28 19:55:10 by seupark           #+#    #+#             */
+/*   Updated: 2020/10/28 19:58:41 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+int		ft_strlen(char *str)
 {
-	char	*tmp;
+	int		idx;
 
-	tmp = dest;
-	if (nb)
-	{
-		while (*dest)
-			dest++;
-		while ((*dest++ = *src++) != 0)
-		{
-			if (--nb == 0)
-			{
-				*dest = '\0';
-				break ;
-			}
-		}
-	}
-	return (tmp);
+	idx = 0;
+	while (str[idx] != '\0')
+		idx++;
+	return (idx);
 }

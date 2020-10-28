@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/27 21:26:02 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/28 21:01:50 by seupark          ###   ########.fr       */
+/*   Created: 2020/10/28 20:17:08 by seupark           #+#    #+#             */
+/*   Updated: 2020/10/28 20:29:41 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+int		ft_atoi(char *str)
 {
-	char	*tmp;
+	int		minus;
+	int		idx;
 
-	tmp = dest;
-	if (nb)
+	idx = 0;
+	minus = 0;
+	while (str[idx] != '\0')
 	{
-		while (*dest)
-			dest++;
-		while ((*dest++ = *src++) != 0)
-		{
-			if (--nb == 0)
-			{
-				*dest = '\0';
-				break ;
-			}
-		}
+		
+
+		idx++;
 	}
-	return (tmp);
+}
+
+int main(){
+	char str[] = "---154aa";
+	printf("%d", ft_atoi(str));
 }

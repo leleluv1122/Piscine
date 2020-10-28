@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/27 21:26:02 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/28 21:01:50 by seupark          ###   ########.fr       */
+/*   Created: 2020/10/28 20:06:23 by seupark           #+#    #+#             */
+/*   Updated: 2020/10/28 20:16:41 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+void	print_char(char c)
 {
-	char	*tmp;
+	write(1, &c, 1);
+}
 
-	tmp = dest;
-	if (nb)
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
 	{
-		while (*dest)
-			dest++;
-		while ((*dest++ = *src++) != 0)
-		{
-			if (--nb == 0)
-			{
-				*dest = '\0';
-				break ;
-			}
-		}
+		write(1, "-2147483648", 11);
+		return ;
 	}
-	return (tmp);
+	if (nb < 0)
+	{
+		print_char('-');
+		nb *= -1;
+	}
+	if (nb < 10)
+		print_char(nb + '0');
+	else
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
 }
