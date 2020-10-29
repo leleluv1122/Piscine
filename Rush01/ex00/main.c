@@ -6,7 +6,7 @@
 /*   By: ychoi <ychoi@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/25 08:09:57 by ychoi             #+#    #+#             */
-/*   Updated: 2020/10/25 08:16:30 by ychoi            ###   ########.fr       */
+/*   Updated: 2020/10/25 20:35:00 by ychoi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,10 +99,10 @@ int		main(int argc, char *argv[])
 	i = 0;
 	while (i != 4)
 	{
-		g_argv_garo[i][0] = argv[1][j] - '0';
-		g_argv_garo[i][1] = argv[1][j + 8] - '0';
-		g_argv_sero[i][0] = argv[1][j + 16] - '0';
-		g_argv_sero[i][1] = argv[1][j + 24] - '0';
+		g_argv_sero[i][0] = argv[1][j] - '0';
+		g_argv_sero[i][1] = argv[1][j + 8] - '0';
+		g_argv_garo[i][0] = argv[1][j + 16] - '0';
+		g_argv_garo[i][1] = argv[1][j + 24] - '0';
 		j = j + 2;
 		i++;
 	}
