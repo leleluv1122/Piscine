@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/28 19:59:02 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/31 14:34:56 by seupark          ###   ########.fr       */
+/*   Created: 2020/10/31 20:31:19 by seupark           #+#    #+#             */
+/*   Updated: 2020/10/31 20:48:14 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	print_char(char c)
+int		ft_sqrt(int nb)
 {
-	write(1, &c, 1);
-}
+	int		i;
 
-void	ft_putstr(char *str)
-{
-	int		idx;
-
-	idx = 0;
-	while (str[idx] != '\0')
+	i = 0;
+	while (i < 46341)
 	{
-		print_char(str[idx]);
-		idx++;
+		if (i * i == nb)
+			break ;
+		if (i * i > nb)
+			return (0);
+		i++;
 	}
+	return (i);
 }

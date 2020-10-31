@@ -1,30 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/28 19:59:02 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/31 14:34:56 by seupark          ###   ########.fr       */
+/*   Created: 2020/10/31 21:44:33 by seupark           #+#    #+#             */
+/*   Updated: 2020/10/31 21:55:04 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	print_char(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
-{
-	int		idx;
-
-	idx = 0;
-	while (str[idx] != '\0')
-	{
-		print_char(str[idx]);
-		idx++;
-	}
-}
