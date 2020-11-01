@@ -6,7 +6,7 @@
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 17:05:25 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/29 20:48:47 by seupark          ###   ########.fr       */
+/*   Updated: 2020/10/31 16:48:44 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,4 @@ void	ft_putnbr_base(int nbr, char *base)
 	if (!str_len)
 		return ;
 	print(nbr, base, str_len);
-}
-
-int main(){
-	ft_putnbr_base(7, "poneyvif");
 }
