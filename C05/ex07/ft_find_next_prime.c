@@ -6,7 +6,7 @@
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 18:51:49 by seupark           #+#    #+#             */
-/*   Updated: 2020/11/01 19:27:15 by seupark          ###   ########.fr       */
+/*   Updated: 2020/11/02 16:48:44 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,27 @@ void	one_padding(int *arr, int n)
 	}
 }
 
+int		ft_sqrt(int n)
+{
+	int		i;
+
+	i = 0;
+	while (i < 46341)
+	{
+		if (i * i >= n)
+			break ;
+		i++;
+	}
+	return (i);
+}
+
 void	sosu_go(int *arr, int n)
 {
 	int		i;
 	int		j;
 
 	i = 2;
-	while (i <= n)
+	while (i <= ft_sqrt(n))
 	{
 		if (arr[i])
 		{
