@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/01 23:02:31 by seupark           #+#    #+#             */
-/*   Updated: 2020/11/02 21:55:59 by seupark          ###   ########.fr       */
+/*   Created: 2020/11/03 15:01:41 by seupark           #+#    #+#             */
+/*   Updated: 2020/11/03 15:09:49 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef			FT_H
+# define		FT_H
 
-void	print(char *str)
-{
-	while (*str)
-	{
-		write(1, str, 1);
-		str++;
-	}
-}
+int		ft_putchar(char c);
+void	ft_putstr(char *str);
+int		ft_strcmp(char *s1, char *s2);
+int		ft_strlen(char *str);
+void	ft_swap(int *a, int *b);
 
-int		main(int argc, char *argv[])
-{
-	int		i;
-
-	i = argc - 1;
-	while (i > 0)
-	{
-		print(argv[i]);
-		write(1, "\n", 1);
-		i--;
-	}
-	return (0);
-}
+#endif

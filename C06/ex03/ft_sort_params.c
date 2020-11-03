@@ -6,7 +6,7 @@
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 13:29:43 by seupark           #+#    #+#             */
-/*   Updated: 2020/11/02 15:01:07 by seupark          ###   ########.fr       */
+/*   Updated: 2020/11/02 21:56:59 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void	sort(int argc, char *argv[])
 		tmp_i = 1;
 		c = argv[1];
 		while (i <= length)
-		{	
-			if(ft_strcmp(c, argv[i]) < 0)
+		{
+			if (ft_strcmp(c, argv[i]) < 0)
 			{
 				c = argv[i];
 				tmp_i = i;

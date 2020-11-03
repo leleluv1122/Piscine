@@ -6,7 +6,7 @@
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 17:47:25 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/31 19:40:24 by seupark          ###   ########.fr       */
+/*   Updated: 2020/11/02 18:29:42 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_iterative_factorial(int nb)
 
 	i = 1;
 	result = 1;
-	if (nb < 0 || nb > 12)
+	if (nb < 0)
 		return (0);
 	while (i <= nb)
 	{

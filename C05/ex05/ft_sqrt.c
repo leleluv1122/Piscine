@@ -6,22 +6,20 @@
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 20:31:19 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/31 20:48:14 by seupark          ###   ########.fr       */
+/*   Updated: 2020/11/02 21:45:23 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_sqrt(int nb)
 {
-	int		i;
+	long	i;
 
 	i = 0;
-	while (i < 46341)
-	{
-		if (i * i == nb)
-			break ;
-		if (i * i > nb)
-			return (0);
+	if (nb <= 0)
+		return (0);
+	while (i * i < nb && i < 46341)
 		i++;
-	}
-	return (i);
+	if (i * i == nb)
+		return (i);
+	return (0);
 }

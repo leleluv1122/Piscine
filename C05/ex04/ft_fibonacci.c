@@ -6,12 +6,14 @@
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 20:07:38 by seupark           #+#    #+#             */
-/*   Updated: 2020/10/31 20:26:17 by seupark          ###   ########.fr       */
+/*   Updated: 2020/11/02 18:32:03 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_fibonacci(int index)
 {
+	if (index < 0)
+		return (-1);
 	if (index == 0)
 		return (0);
 	if (index == 1)
