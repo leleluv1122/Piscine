@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_show_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/03 15:01:41 by seupark           #+#    #+#             */
-/*   Updated: 2020/11/04 13:22:18 by seupark          ###   ########.fr       */
+/*   Created: 2020/11/04 17:38:14 by seupark           #+#    #+#             */
+/*   Updated: 2020/11/04 17:39:17 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include <unistd.h>
 
-int		ft_putchar(char c);
-void	ft_putstr(char *str);
-int		ft_strcmp(char *s1, char *s2);
-int		ft_strlen(char *str);
-void	ft_swap(int *a, int *b);
+void	ft_show_tab(struct s_stock_str *par)
+{
 
-#endif
+}

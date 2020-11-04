@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seupark <seupark@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/03 15:01:41 by seupark           #+#    #+#             */
-/*   Updated: 2020/11/04 13:22:18 by seupark          ###   ########.fr       */
+/*   Created: 2020/11/04 15:42:23 by seupark           #+#    #+#             */
+/*   Updated: 2020/11/04 15:48:30 by seupark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#ifndef FT_POINT_H
 
-int		ft_putchar(char c);
-void	ft_putstr(char *str);
-int		ft_strcmp(char *s1, char *s2);
-int		ft_strlen(char *str);
-void	ft_swap(int *a, int *b);
+# define FT_POINT_H
+
+typedef struct	s_point
+{
+	int	x;
+	int	y;
+}				t_point;
+
+void			set_point(t_point *point);
 
 #endif
